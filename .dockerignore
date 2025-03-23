@@ -1,0 +1,11 @@
+.git
+vendor
+node_modules
+public/build
+# Ignore files in bootstrap cache directory.
+# NOTE: Maybe you want build and inspect your Docker image in local computer before push to production.
+# These ignore is useful because you may run `composer install` before in your local computer.
+# In Dockerfile, we add `--no-dev` flag in `composer install`. This makes skip the `require-dev` deps.
+# If we don't ignore these files then the process of inspect Docker image will be failed.
+bootstrap/cache/packages.php
+bootstrap/cache/services.php
